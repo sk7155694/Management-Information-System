@@ -1,0 +1,15 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE `student` (
+  `regno` int(50) NOT NULL,
+  `sname` varchar(50) NOT NULL,
+  `gname` varchar(50) NOT NULL,
+ `year` varchar(50) NOT NULL, `dept` varchar(50) NOT NULL,  `contact` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `address` varchar(2000) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `blgroup` varchar(50) NOT NULL)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `faculty`(  `sname` varchar(50) NOT NULL,   `contact` varchar(50) NOT NULL,  `email` varchar(50) NOT NULL,  `address` varchar(2000) NOT NULL,  `gender` varchar(10) NOT NULL,  `blgroup` varchar(50) NOT NULL,  `qualification` varchar(50) NOT NULL)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `department` ( 
+  `year` VARCHAR(50) NOT NULL , `std_in` VARCHAR(50) NOT NULL , `counselling` VARCHAR(50) NOT NULL , `management` VARCHAR(50) NOT NULL , `late_entry` VARCHAR(50) NOT NULL , `total` VARCHAR(50) NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=latin1;ALTER TABLE `faculty` ADD UNIQUE(`email`);ALTER TABLE `department` ADD UNIQUE(`year`);ALTER TABLE `student` ADD UNIQUE(`regno`);
